@@ -2,59 +2,38 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-  </head>
-  <body>
-    
-  
-  <h1>Setting up an Ubuntu 16.04 server for remote access to do Deep learning on your local network
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <h1>Things that are interesting that I've been learning
   </h1>
-  <i>The back story is as follows.... On my desk I have a decent PC with a mediocre GPU, and I want to use a larger
-    tower with a decent GPU in headless mode (no display) and stashed in a corner. I want to use a remote connection.
-  </i>
-  
 
-  First off- I need to attribute the sources that I combined before going through my setup.<br>
-  <a href="https://www.pugetsystems.com/labs/hpc/The-Best-Way-To-Install-Ubuntu-16-04-with-NVIDIA-Drivers-and-CUDA-1097/">Puget Systems:  
-    The Best Way To Install Ubuntu 16.04 with NVIDIA Drivers and CUDA</a><br>
-  <a href="https://yangcha.github.io/CUDA90/">
-    Changjiang's blog : Install Nvidia CUDA-9.0 on Ubuntu 16.04 for Deep Learning</a><br>
-    <a href= "https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04">Digital Ocean - How to Install and Configure VNC on Ubuntu 16.04</a><br>
-  <a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04">Digital Ocean - How To Install the Anaconda Python Distribution on Ubuntu 16.04</a><br>
-  <a href="https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh">Coderwall- setting up remote connection to notebook </a>
-  <h3>Step by Step instructions</h3>
-  <ol>
-    <li>Set up the hdd partitions and install Ubuntu server as listed in Puget link above. Complete thru Step 4.</li>
-    <li>Set up SSH on the server and connect from a second computer (unplug monitor when rebooting).</li>
-    <li>Install CUDA and associated libraries as in Changjiang above, complete all the steps (note- there's a GOTCHA where one of the commands will fail and expects an explicit "Y"</li>
-    <li>Setup the NVIDIA utities using the Puget blog post (From "Configure CUDA for use on your system" to the end.</li>
-    <li>Validate that you have NVidia drivers installed by running 'nvidia-smi' from the terminal.This will confirm that your driver version is correct</li>
-    <li>Validate that CUDA 9.0 is installed by running 'nvcc --version'</li>
-    <li>Congrats - now it's time to install Python and other fun things. We'll go the Miniconda path</li>
-    <li>Download the latest anaconda package and check the <a href="https://docs.anaconda.com/anaconda/install/hashes/all/">hash</a>
-    <li>Run the installer and then use the coderwall instructions to get a remote connection to the notebook</li>
-    <li>Open a notebook and confirm you can import the regular packages (numpy, pandas, matplotlib, scikit-learn)</li>
-    <li>Install tensorflow as described <a href="https://www.tensorflow.org/install/install_linux#InstallingAnaconda">here</a>.</li>
-    <li>GOTCHA - jupyter notebook isn't installed by default- so import tensorflow fails. run this in the tensorflow venv "conda install jupyter"</li>
-    <li>Validate that Tensorflow can be imported to the ipython notebook (also check that you are using the right interpreter using '!which python'</li>
-    <li><a href="https://conda.io/docs/user-guide/tasks/manage-environments.html#cloning-an-environment">Clone</a> the environment into a new Keras env</li>
-    <li>Activate the new environment and then perform 'pip install keras'</li>
-    <li>Clone your tensorflow environment a second time to create an environment called pytorch</li>
-    <li>Activate the pytorch environment and install pytorch using the command generated using the "start locally" section of the <a href="https://shiftlab.github.io/pytorch/get-started">pytorch page</a>, (e.g. 'conda install pytorch torchvision -c pytorch').</li>
-  </ol>
+  <h2>Python</h2>
+  <i>Back story- After finishing a PhD using fragile jupyter notebooks and losing weeks to
+    associated poor methods I've been doing a ramp-up in proper software methods.</i><br>
+  I like using `pip install` to install packages. I've been learning how to use <i><a
+      href="https://packaging.python.org/en/latest/">python packaging</a></i>:
+  <ul>
+    <li>virtual environments for different Python versions, different projects, and different functions within a project
+    </li>
+    <li>python packaging to make my own source and wheel distributions, and putting them on a PyPi index</li>
+  </ul>
 
 
-  <h1>Simple links to help configure workstations. </h1>
-  <h3>Towards unit testing in C. </h3>
-  <a href = "http://dmitryfrank.com/articles/unit_testing_embedded_c_applications">Blog by Dmitiry Frank on Ceedling </a> <br>
-  <a href= "https://code.visualstudio.com/docs/languages/cpp">Setting up Visual Studio Code for C and C++</h3)</a> <br>
-  
+
+  <h2>Metrology</h2>
+  <p>I've been fortunate to enough to work with scientists in the metrology field. Specifically those at the UK <a
+      href="https://www.npl.co.uk/">National Physics Laboratory</a>.</p>
+  They have an elearning platform where I've been doing some <a href="https://elearning.npl.co.uk/"> elearning</a>.
+  When I'm feeling ambitious I toil over the biblocal <a
+    href="https://www.bipm.org/en/committees/jc/jcgm/publications">JCGM Publications: Guides in Metrology</a>.
+
 
 </body>
-</html>
 
+</html>
