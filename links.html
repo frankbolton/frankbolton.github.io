@@ -1,39 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Links & Interests — Frank Bolton</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand" href="index.html">
+            <img class="avatar" src="frank.jpg" alt="Portrait of Frank Bolton" />
+            <span>Frank Bolton</span>
+          </a>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="links.html" aria-current="page">Links</a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <main id="content">
+      <section class="section">
+        <div class="container">
+          <h1>Things I am exploring</h1>
 
-<body>
+          <div class="card" style="margin-top: 24px;">
+            <h2>Python</h2>
+            <p><i>Back story — After finishing a PhD using fragile Jupyter notebooks and losing weeks to associated poor methods, I've been doing a ramp-up in proper software methods.</i></p>
+            <p>I like using <code>pip install</code> to install packages. I've been learning how to use <i><a class="link" href="https://packaging.python.org/en/latest/" target="_blank" rel="noopener">Python packaging</a></i>:</p>
+            <ul>
+              <li>Virtual environments for different Python versions, different projects, and focused functions within a project</li>
+              <li>Packaging to create my own source and wheel distributions, and publishing them on a PyPI index</li>
+            </ul>
+          </div>
 
-  <h1>Things that are interesting that I've been learning
-  </h1>
+          <div class="card" style="margin-top: 24px;">
+            <h2>Metrology</h2>
+            <p>I've been fortunate to work with scientists in the metrology field, especially those at the UK <a class="link" href="https://www.npl.co.uk/" target="_blank" rel="noopener">National Physical Laboratory</a>.</p>
+            <p>They have an e-learning platform where I've been doing some <a class="link" href="https://elearning.npl.co.uk/" target="_blank" rel="noopener">e-learning</a>. When I'm feeling ambitious I toil over the biblical <a class="link" href="https://www.bipm.org/en/committees/jc/jcgm/publications" target="_blank" rel="noopener">JCGM Publications: Guides in Metrology</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <h2>Python</h2>
-  <i>Back story- After finishing a PhD using fragile jupyter notebooks and losing weeks to
-    associated poor methods I've been doing a ramp-up in proper software methods.</i><br>
-  I like using `pip install` to install packages. I've been learning how to use <i><a
-      href="https://packaging.python.org/en/latest/">python packaging</a></i>:
-  <ul>
-    <li>virtual environments for different Python versions, different projects, and different functions within a project
-    </li>
-    <li>python packaging to make my own source and wheel distributions, and putting them on a PyPi index</li>
-  </ul>
-
-
-
-  <h2>Metrology</h2>
-  <p>I've been fortunate to enough to work with scientists in the metrology field. Specifically those at the UK <a
-      href="https://www.npl.co.uk/">National Physics Laboratory</a>.</p>
-  They have an elearning platform where I've been doing some <a href="https://elearning.npl.co.uk/"> elearning</a>.
-  When I'm feeling ambitious I toil over the biblocal <a
-    href="https://www.bipm.org/en/committees/jc/jcgm/publications">JCGM Publications: Guides in Metrology</a>.
-
-
-</body>
-
-</html>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>© 2025 Frank Bolton</div>
+        <div>
+          <a href="publications.html">Publications</a>
+          ·
+          <a href="links.html" aria-current="page">Links</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
