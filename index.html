@@ -1,44 +1,267 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-        <title>Frank Bolton - Landing page</title>
-        <style>
-
-
-        </style>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frank Bolton</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-        <h1>Frank Bolton</h1>
-        <p>
-                <img src="frank.jpg" />
-        </p>
-        <p>
-                This is the personal home page of Frank Bolton.<br />
-                I work as a Software Developer at <a href="goldstandardphantoms.com">Gold Standard Phantoms</a>.
 
-        </p>
-        <p>
-        <h2>Academic History</h2>
-        <ul>
-                <li>BSc Information Technology - University of Johannesburg (2006)
-                <li>BIng Electrical and Electronic Engineering - University of Johannesburg (2007)
-                <li>MSc(Med) specializing in Biomedical Engineering - University of Cape Town (2011)
-                <li>PhD - Tel Aviv University (2022)
-        </ul>
-        </p>
-        <p>
-                If you're interested in making contact you can reach out on <a
-                        href=https://www.linkedin.com/in/frank-bolton-0a786247 />linkedin</a> or check out my
-                publications on <a href="https://scholar.google.co.il/citations?user=Pf3V1Y4AAAAJ&hl=en">Google
-                        Scholar.</a>
-        </p>
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#publications">Publications</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-        <a href="/links.html">What I'm curious about at the moment</a>
+<!-- ─────────────────────────────────────────── HERO -->
+<section id="hero">
+  <h1>Frank Bolton</h1>
+  <p class="subhead">Engineer. Researcher. I translate hard problems into things that work.</p>
+  <p>
+    I work at the intersection of frontier science and engineering delivery —
+    designing instruments, building systems, and working with the researchers
+    who need them. My background spans production-quality software, data science,
+    through PCB design and embedded firmware — and on to FDA regulatory
+    submissions, clinical trials, and peer-reviewed publication.
+  </p>
+  <ul class="anchors">
+    <li>Biomedical instrumentation &amp; imaging</li>
+    <li>Research engineering &amp; programme translation</li>
+    <li>Hardware · Firmware · Software · Regulatory</li>
+  </ul>
+  <div class="cta-group">
+    <a class="cta" href="#work">See my work</a>
+    <a class="cta" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── ABOUT -->
+<section id="about">
+  <h2>About</h2>
+
+  <h3>How I work</h3>
+  <p>
+    I'm not a specialist in the usual sense. I've spent twenty years moving between
+    the physics of a problem, the hardware needed to measure it, the firmware and
+    software to make it useful, and the regulatory and clinical context that determines
+    whether it matters.
+  </p>
+  <p>
+    That's let me work directly with some extraordinary people — Prof. Xavier Golay from UCL,
+    whose work on quantitative MRI and ADC calibration in prostate cancer underpins
+    the clinical science behind the PREDICT trial; Prof. Steve Jacques
+    from Tufts University, a leading figure in biomedical optics whose published models
+    for optical absorption and scattering in biological tissue were foundational to the
+    multispectral imaging system I built at MobileODT; and Prof. David Kelso from Northwestern on
+    point-of-care diagnostics for low-resource settings.
+  </p>
+  <p>
+    The common thread across all of it is translation: understanding what a scientist
+    or clinician actually needs to know, and working out what needs to be built to
+    let them know it.
+  </p>
+
+  <h3>Background</h3>
+  <table class="timeline">
+    <thead>
+      <tr><th>Period</th><th>Where</th><th>What</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2022–present</td><td>Gold Standard Phantoms, Sheffield</td><td>MRI calibration tooling for clinical trials</td></tr>
+      <tr><td>2022</td><td>Clexio Biosciences (contract)</td><td>CT imaging analysis for drug delivery device design</td></tr>
+      <tr><td>2015–2020</td><td>MobileODT, Tel Aviv</td><td>Multispectral imaging system; FDA-cleared AI colposcope</td></tr>
+      <tr><td>2011–2013</td><td>CIGHT, Northwestern University</td><td>Point-of-care diagnostics for global health</td></tr>
+      <tr><td>2011</td><td>University of Cape Town</td><td>MSc Biomedical Engineering (Medical Imaging)</td></tr>
+      <tr><td>2022</td><td>Tel Aviv University</td><td>PhD Industrial Engineering</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:1.5rem;">Currently</h3>
+  <p>
+    I'm a senior software engineer at Gold Standard Phantoms, where I am core to the
+    analytical pipeline for the PREDICT clinical trial — a €1.6m Horizon Europe
+    programme working to make prostate cancer MRI a traceable quantitative measurement.
+  </p>
+
+  <p>
+    <a href="https://scholar.google.co.il/citations?user=Pf3V1Y4AAAAJ&hl=en">Google Scholar</a> ·
+    <a href="https://www.linkedin.com/in/fbolt">LinkedIn</a> ·
+    <a href="https://github.com/frankbolton">GitHub</a>
+  </p>
+</section>
+
+<!-- ─────────────────────────────────────────── WORK -->
+<section id="work">
+  <h2>Work</h2>
+  <div class="project-grid">
+
+    <div class="card">
+      <img src="assets/img/project-multispectral.jpg" alt="Multispectral colposcopy system" />
+      <p class="tags">Hardware · Firmware · Optics · Clinical · Published</p>
+      <h3>Multispectral Colposcopy System</h3>
+      <p class="meta">MobileODT, 2015–2020</p>
+      <p>
+        Designed and built three iterations of a portable multispectral imaging system
+        for cervical tissue characterisation — from PCB layout and LED driver circuits
+        through MSP430 firmware to image analysis algorithms incorporating biomedical
+        tissue models. Developed in direct collaboration with Prof. Steve Jacques (OHSU).
+        Published in the Journal of Biomedical Optics (2018).
+      </p>
+      <p class="note">
+        The hardware became the research platform underpinning the EVA Smart Colposcope —
+        the first FDA-cleared device with integrated AI for cervical cancer detection,
+        now deployed in 29 countries.
+      </p>
+      <p><a href="https://doi.org/10.1117/1.JBO.23.12.121612">→ Read the paper</a></p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/project-eva-regulatory.jpg" alt="EVA Smart Colposcope" />
+      <p class="tags">FDA · Regulatory · Manufacturing · Firmware</p>
+      <h3>EVA Smart Colposcope: Regulatory &amp; Scale-up</h3>
+      <p class="meta">MobileODT, 2015–2020</p>
+      <p>
+        Hardware and firmware engineer on the EVA colposcope programme working toward
+        FDA 510(k) clearance. Took over PCB design from an external contractor and drove
+        it to production; designed and developed firmware through to production release;
+        resolved thermal design issues; and worked directly with testing laboratories
+        through ISO electrical and safety certification. Contributed to EMC and thermal
+        testing documentation as part of the broader regulatory submission.
+      </p>
+      <p class="note">MobileODT was acquired by Liger Medical in 2022 to form an integrated screen-and-treat platform targeting the elimination of cervical cancer in low-resource settings worldwide.</p>
+      <p><a href="https://doi.org/10.1117/12.2512201">→ Read more about the EVA system and image quality</a></p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/project-predict.jpg" alt="PREDICT MRI calibration pipeline" />
+      <p class="tags">Python · Metrology · Clinical Trial · Open Source</p>
+      <h3>PREDICT: MRI Calibration Pipeline</h3>
+      <p class="meta">Gold Standard Phantoms, 2022–present</p>
+      <p>
+        Core developer of the analytical pipeline underpinning the PREDICT clinical
+        trial (NCT06607783) — a €1.6m Horizon Europe EIC Accelerator programme
+        targeting standardised, traceable prostate cancer MRI diagnostics. Built full
+        uncertainty propagation for temperature-dependent phantom materials in close
+        collaboration with Peter Harris at NPL. Also lead developer of spirit-phantom,
+        the open-source Python QA tool used at MRI sites internationally.
+      </p>
+      <p>
+        <a href="https://github.com/goldstandardphantoms/spirit-phantom">→ spirit-phantom on GitHub</a><br />
+        <a href="https://clinicaltrials.gov/study/NCT06607783">→ PREDICT trial registration</a><br />
+        <a href="https://www.youtube.com/watch?v=t-ClunKOMYw">→ Prof. Xavier Golay talking about ADC calibration</a><br />
+        <a href="https://archive.ismrm.org/2025/0808.html">→ ISMRM 2025: A device and method for in-vivo calibration of ADC measurements in prostate cancer</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/project-cight.jpg" alt="Point-of-care diagnostics at CIGHT" />
+      <p class="tags">Prototyping · Global Health · Diagnostics · Gates Foundation</p>
+      <h3>Point-of-Care Diagnostics (CIGHT, Northwestern)</h3>
+      <p class="meta">CIGHT, Northwestern University, 2011–2013</p>
+      <p>
+        Early engineering contributor on two Gates Foundation-funded diagnostic
+        programmes: a sample preparation automation system for the LYNX infant HIV
+        p24 antigen test, and a phase-gate cartridge test platform for a point-of-care
+        PCR instrument. Acted as the primary interface between external engineering
+        contractors and the molecular biology team, translating assay requirements
+        into hardware specifications.
+      </p>
+      <p class="note">
+        The PCR platform programme later became the DASH analyser — which received
+        FDA Emergency Use Authorization and $21.3m in NIH funding for COVID-19 testing.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/project-clexio.jpg" alt="CT imaging analysis for Clexio" />
+      <p class="tags">ML · DICOM · Drug-Device · Contract</p>
+      <h3>CT Imaging Analysis for Drug Delivery Design</h3>
+      <p class="meta">Clexio Biosciences, 2022</p>
+      <p>
+        Analysed CT DICOM imaging data to inform applicator configuration design for
+        a combination drug/device for localised deep nasal delivery. Built an ML model
+        (R²=0.7) to characterise nasal cavity geometry variation across a patient
+        population, with results used directly in device design decisions.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="assets/img/project-lodox.jpg" alt="Lodox Statscan reconstruction" />
+      <p class="tags">Medical Imaging · Reconstruction · MSc Research</p>
+      <h3>Tomographic Reconstruction: Lodox Statscan</h3>
+      <p class="meta">University of Cape Town, 2009–2011</p>
+      <p>
+       MSc dissertation: Extended prior work on tomographic reconstruction from the Lodox Statscan, a full-body X-ray system used in South African trauma and forensic pathology. The key contribution was automating geometric parameter recovery from image data — designing a calibration phantom and image-processing pipeline to identify marker positions across projection sets, then using non-linear optimisation to recover c-arm angles and scanner geometry for use in filtered back-projection reconstruction.
+      </p>
+      <p><a href="publications/MScFrank.pdf">→ Read the dissertation</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── PUBLICATIONS -->
+<section id="publications">
+  <h2>Selected Publications &amp; Patents</h2>
+
+  <h3>Publications</h3>
+  <ul class="pub-list">
+    <li>
+      Bolton F et al. (2018). <em>Portable, low-cost multispectral imaging system: design,
+      development, validation, and utilization.</em> Journal of Biomedical Optics, 23(12).
+      <a href="https://doi.org/10.1117/1.JBO.23.12.121612">→ link</a>
+    </li>
+    <li>
+      Bolton F et al. (2024). <em>Can Previews Mitigate the Effect of Interruptions?</em>
+      International Journal of Human–Computer Interaction.
+      <a href="https://psycnet.apa.org/doi/10.1080/10447318.2022.2137915">→  link</a>
+    </li>
+    <li>
+      Bolton F et al. (2015). <em>A Wrist-Worn Thermohaptic Device for Graceful Interruption.</em>
+      IxD&amp;A Journal.
+      <a href="https://pure.itu.dk/ws/files/81828927/A_Wrist_Worn_Thermohaptic_Device_for_Graceful_Interruption.pdf">→ link</a>
+    </li>
+    <li><a href="https://scholar.google.co.il/citations?user=Pf3V1Y4AAAAJ&hl=en">Full list on Google Scholar →</a></li>
+  </ul>
+
+  <h3>Patents</h3>
+  <ul class="patent-list">
+    <li>Method and system for purple light imaging. US 17/055,594.</li>
+    <li>Automated monitoring of medical imaging procedures. US 16/964,303.</li>
+    <li>A method of MRI calibration and calibration device. PCT WO2025083252A1.</li>
+  </ul>
+</section>
+
+<!-- ─────────────────────────────────────────── CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    I'm open to conversations about research engineering roles, instrumentation and
+    diagnostics problems, and consulting on hardware-software-regulatory projects at
+    the frontier of biomedical science.
+  </p>
+  <ul class="contact-links">
+    <li>Email: <a href="mailto:frankjbolton@gmail.com">frankjbolton@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/fbolt">linkedin.com/in/fbolt</a></li>
+    <li>GitHub: <a href="https://github.com/frankbolton">github.com/frankbolton</a></li>
+    <li>Google Scholar: <a href="https://scholar.google.co.il/citations?user=Pf3V1Y4AAAAJ&hl=en">scholar profile</a></li>
+  </ul>
+</section>
+
+<script>
+  // smooth-scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 
 </body>
-
 </html>
