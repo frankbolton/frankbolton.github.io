@@ -1,0 +1,192 @@
+/* bare-bones — layout only; visual design to follow */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #fff;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── nav ── */
+nav {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* ── sections ── */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type { border-bottom: none; }
+
+h1 { font-size: 2.4rem; margin-bottom: 0.3rem; }
+h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+
+p { margin-bottom: 1rem; }
+
+/* ── hero ── */
+
+#hero .subhead {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+#hero .anchors {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.4rem;
+}
+
+#hero .anchors li {
+  border: 1px solid #999;
+  padding: 0.25rem 0.7rem;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+}
+
+.cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.cta {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #1a1a1a;
+  text-decoration: none;
+  color: inherit;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.cta:hover { background: #1a1a1a; color: #fff; }
+
+/* ── timeline table ── */
+.timeline {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.timeline th, .timeline td {
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+.timeline th {
+  font-weight: 600;
+  color: #555;
+}
+
+/* ── project cards ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid #d0d0d0;
+  padding: 1.2rem;
+  overflow: hidden;
+}
+
+.card img {
+  /* bleed to card edges, anchor top so captions/players don't dominate */
+  display: block;
+  width: calc(100% + 2.4rem);
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  background: #eee;
+  margin: -1.2rem -1.2rem 1rem;
+}
+
+/* .card-img-missing applied via JS onerror when image fails to load */
+.card img.missing {
+  height: 0;
+  margin-bottom: 0;
+}
+
+.card .tags {
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card .meta {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.card .note {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.6rem;
+}
+
+.card a { color: inherit; }
+
+/* ── publications ── */
+.pub-list, .patent-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.pub-list li, .patent-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 0.95rem;
+}
+
+/* ── contact ── */
+#contact .contact-links {
+  list-style: none;
+  font-family: sans-serif;
+}
+
+#contact .contact-links li { padding: 0.4rem 0; }
+
+#contact .contact-links a { color: inherit; }
+
+/* ── responsive ── */
+@media (min-width: 600px) {
+  .project-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 860px) {
+  .project-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
